@@ -26,6 +26,14 @@ public class User {
         createdAt = new Date();
     }
 
+    public User(String id, String name, String email,String lastName, Date createdAt){
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.lastName = lastName;
+        this.createdAt = createdAt;
+    }
+
     public String getName()
     {
         return name;
