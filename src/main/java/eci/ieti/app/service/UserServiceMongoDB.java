@@ -69,7 +69,8 @@ public class UserServiceMongoDB implements UserService{
         userRepository.deleteById(id);
         userDocument.setName(userDto.getName());
         userDocument.setEmail(userDto.getEmail());
-        userDocument.setLastName(userDocument.getLastName());
+        userDocument.setLastName(userDto.getLastName());
+        //System.out.println(userDocument.getLastName());
         userRepository.save(userDocument);
         return new User(userDocument.getId(),userDocument.getName(),userDocument.getEmail(),userDocument.getLastName(),userDocument.getCreatedAt());
     }
